@@ -1,0 +1,10 @@
+<div >
+  <md-card class="quiz-card" *ngIf="optionsObj">
+    <img md-card-image src="{{optionsObj.imageSrc}}">
+    <md-card-actions>
+      <md-radio-button value="{{optionsObj.value}}">{{optionsObj.name}}</md-radio-button>
+    </md-card-actions>
+  </md-card>
+</div>
+
+

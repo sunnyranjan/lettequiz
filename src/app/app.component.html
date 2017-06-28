@@ -1,5 +1,16 @@
-<top-nav-bar></top-nav-bar>
-<side-bar></side-bar>
-<div class="main_content">
-  <router-outlet></router-outlet>
-</div>
+<md-sidenav-container>
+  <app-side-nav></app-side-nav>
+<!--  <md-toolbar color="primary">
+
+
+    Angular Material2 Example App
+
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+  </md-toolbar>-->
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
+

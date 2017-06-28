@@ -1,3 +1,26 @@
-<p>
-  quiz works!
-</p>
+<div class="quiz-container">
+
+
+  <div [ngSwitch]="stepNumber">
+    <app-landing (nextStep)="incrementStep()"
+                 *ngSwitchCase="0"></app-landing>
+
+    <app-erste-schritt (nextStep)="incrementStep()"
+                       (previousStep)="decrementStep()"
+                       *ngSwitchCase="1"></app-erste-schritt>
+
+    <app-zweite-schritt (nextStep)="incrementStep()"
+                        (previousStep)="decrementStep()"
+                        *ngSwitchCase="2"></app-zweite-schritt>
+
+    <app-dritte-schritt  (nextStep)="incrementStep()"
+                         (previousStep)="decrementStep()"
+                         *ngSwitchCase="3"></app-dritte-schritt>
+
+    <app-ergebnisse  *ngSwitchCase="4"></app-ergebnisse>
+
+    <app-landing *ngSwitchDefault></app-landing>
+
+  </div>
+
+</div>

@@ -14,7 +14,13 @@ import { ErgebnisseComponent } from './pages/quiz/ergebnisse/ergebnisse.componen
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-
+import { SideNavComponent } from './side-nav/side-nav.component';
+import {MaterialModule, MdNativeDateModule, MdSidenavModule} from '@angular/material';
+import {ROUTES} from './app.routes';
+import {RouterModule} from '@angular/router';
+import {MdButtonModule} from '@angular/material';
+import { QuizCardComponent } from './quiz-card/quiz-card.component';
+import {TrackQuizService} from "./services/track-quiz.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,16 +32,23 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     DritteSchrittComponent,
     LandingComponent,
     ErgebnisseComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SideNavComponent,
+    QuizCardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(ROUTES, {useHash: false}),
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MaterialModule,
+    MdNativeDateModule,
+    MdButtonModule,
+    MdSidenavModule
   ],
-  providers: [],
+  providers: [TrackQuizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

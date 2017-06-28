@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TrackQuizService} from '../../../services/track-quiz.service';
+import {Activity} from '../../../models/activity';
 
 @Component({
   selector: 'app-ergebnisse',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErgebnisseComponent implements OnInit {
 
-  constructor() { }
+  interests: any;
+  personType: any;
+  targetGroup: any;
+
+  constructor(private trackQuiz: TrackQuizService) {
+    this.personType = this.trackQuiz.getFirstStepChoice();
+    this.targetGroup = this.trackQuiz.getSecondStepChoice();
+    this.interests = this.trackQuiz.getThirdStepChoice();
+  }
 
   ngOnInit() {
   }

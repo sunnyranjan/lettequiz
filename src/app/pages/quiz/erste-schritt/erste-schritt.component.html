@@ -1,3 +1,29 @@
-<p>
-  erste-schritt works!
-</p>
+<div class="erste-schritt-container">
+  <div class="container">
+
+    <md-radio-group [(ngModel)]="personType">
+
+      <div class="row">
+        <div *ngFor="let firstStep of firstStepOptions"
+             class="col-xs-12 col-sm-6 col-md-4">
+          <app-quiz-card [optionsObj]="firstStep"></app-quiz-card>
+        </div>
+      </div>
+
+    </md-radio-group>
+
+
+    <div class="button-row">
+      <button class="primary"
+              (click)="previousStep.emit(1)"
+              md-raised-button>Zurück
+      </button>
+
+      <button class="primary"
+              [disabled]="!personType"
+              (click)="submitFirstStep(1)"
+              md-raised-button>Weiter
+      </button>
+    </div>
+  </div>
+</div>

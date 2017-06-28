@@ -1,3 +1,29 @@
-<p>
-  zweite-schritt works!
-</p>
+<div class="zweite-schritt-container">
+  <div class="container">
+
+    <md-radio-group [(ngModel)]="targetGroup">
+
+      <div class="row">
+        <div *ngFor="let secondStep of secondStepOptions"
+             class="col-xs-12 col-sm-6 col-md-4">
+          <app-quiz-card [optionsObj]="secondStep"></app-quiz-card>
+        </div>
+      </div>
+
+    </md-radio-group>
+
+
+    <div class="button-row">
+      <button class="primary"
+              (click)="previousStep.emit(1)"
+              md-raised-button>Zurück
+      </button>
+
+      <button class="primary"
+              [disabled]="!targetGroup"
+              (click)="submitSecondStep(1)"
+              md-raised-button>Weiter
+      </button>
+    </div>
+  </div>
+</div>

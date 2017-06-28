@@ -1,3 +1,29 @@
-<p>
-  dritte-schritt works!
-</p>
+<div class="erste-schritt-container">
+  <div class="container">
+
+    <md-radio-group [(ngModel)]="interests">
+
+      <div class="row">
+        <div *ngFor="let thirdStep of thirdStepOptions"
+             class="col-xs-12 col-sm-6 col-md-4">
+          <app-quiz-card [optionsObj]="thirdStep"></app-quiz-card>
+        </div>
+      </div>
+
+    </md-radio-group>
+
+
+    <div class="button-row">
+      <button class="primary"
+              (click)="previousStep.emit(1)"
+              md-raised-button>Zurück
+      </button>
+
+      <button class="primary"
+              [disabled]="!interests"
+              (click)="submitThirdStep(1)"
+              md-raised-button>Weiter
+      </button>
+    </div>
+  </div>
+</div>
