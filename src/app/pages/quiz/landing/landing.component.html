@@ -1,9 +1,47 @@
-<div class="landing-container">
-  <div class="container">
-    <div class="button-row">
-      <button class="primary"
-              (click)="nextStep.emit(1)"
-              md-raised-button>Raised button</button>
-    </div>
+<div class="landing-container align-items-center">
+
+
+  <div class="start-container container d-flex flex-column justify-content-center align-items-center">
+    <h3 class="text-center bounce infinite">
+      <app-result-banner [bannerText]="'Lette-Quiz'"></app-result-banner>
+
+      Finde heraus Welche projekte und angebote zu dir passen und Wo du dich im kiez engagieren kannst!
+    </h3>
+
+    <button class="quiz-start-buttons bounceInDown" color="accent" md-fab
+            (click)="nextStep.emit(1)">
+      <div>LOS</div>
+      <div>GEHTS!!!</div></button>
+
   </div>
+
+
+  <footer class="landing-footer">
+    <img class="img-fluid" src="../../../../assets/image/logo_lette.jpg">
+    <div class="d-inline-flex">
+      <span class="logo">
+        AG URBAN
+      </span>
+      <span class="logo-text">
+        <div>
+          URBAN DESIGN
+        </div>
+        <div>
+           ARCHiTEKTUR
+        </div>
+        <div>
+          PARTIZIPATION
+        </div>
+        <div>
+          STRATEGIE
+        </div>
+        <div>
+          KONZEPT
+        </div>
+
+      </span>
+
+    </div>
+  </footer>
+
 </div>

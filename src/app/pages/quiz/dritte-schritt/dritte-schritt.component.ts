@@ -6,7 +6,7 @@ import {TrackQuizService} from "../../../services/track-quiz.service";
 @Component({
   selector: 'app-dritte-schritt',
   templateUrl: './dritte-schritt.component.html',
-  styleUrls: ['./dritte-schritt.component.css']
+  styleUrls: ['./dritte-schritt.component.scss']
 })
 export class DritteSchrittComponent implements OnInit, OnDestroy {
   @Output() nextStep: EventEmitter<number> = new EventEmitter<number>();
@@ -16,19 +16,32 @@ export class DritteSchrittComponent implements OnInit, OnDestroy {
   private interestsState: Subscription;
 
   constructor(private trackQuiz: TrackQuizService) {
-    this.interestsState = this.trackQuiz.trackThirdStep$.subscribe((state: any ) => {
+    this.interestsState = this.trackQuiz.trackThirdStep$.subscribe((state: any) => {
       this.interests = state;
     });
+    this.interests = this.trackQuiz.getThirdStepChoice();
   }
-
 
 
   ngOnInit() {
     this.thirdStepOptions = thirdStepOptions.options;
   }
-  submitThirdStep(step: number) {
+  goPreviousStep(step: number) {
+    this.trackQuiz.setThirdStepChoice(this.interests);
+    this.previousStep.emit(step);
+  }
+
+  goNextStep(step: number) {
     this.trackQuiz.setThirdStepChoice(this.interests);
     this.nextStep.emit(step);
+  }
+
+  optionChecked(option: any) {
+    if (this.interests) {
+      return option.value === this.interests ? true : false;
+    } else {
+      return false;
+    }
   }
 
   ngOnDestroy(): void {

@@ -21,6 +21,8 @@ import {RouterModule} from '@angular/router';
 import {MdButtonModule} from '@angular/material';
 import { QuizCardComponent } from './quiz-card/quiz-card.component';
 import {TrackQuizService} from "./services/track-quiz.service";
+import { ResultBannerComponent } from './result-banner/result-banner.component';
+import { ResultPanelsComponent } from './result-panels/result-panels.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import {TrackQuizService} from "./services/track-quiz.service";
     ErgebnisseComponent,
     PageNotFoundComponent,
     SideNavComponent,
-    QuizCardComponent
+    QuizCardComponent,
+    ResultBannerComponent,
+    ResultPanelsComponent
   ],
   imports: [
     BrowserModule,

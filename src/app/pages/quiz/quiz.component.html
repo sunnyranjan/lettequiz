@@ -1,7 +1,8 @@
-<div class="quiz-container">
+<div class="quiz-page-container">
 
 
-  <div [ngSwitch]="stepNumber">
+  <div class= "quiz-steps"
+       [ngSwitch]="stepNumber">
     <app-landing (nextStep)="incrementStep()"
                  *ngSwitchCase="0"></app-landing>
 

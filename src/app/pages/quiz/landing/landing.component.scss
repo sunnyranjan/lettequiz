@@ -1,0 +1,45 @@
+:host{
+  height: 100%;
+  width: 100%;
+}
+.landing-container{
+  height:calc(100vh - 64px);
+  width: 100%;
+  display: flex ;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+.start-container {
+  margin-top: -100px;
+}
+.quiz-start-buttons{
+  width: 150px;
+  height: 150px;
+  font-size: 28px;
+  margin: 15px;
+
+}
+.landing-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #efefef;
+  text-align: center;
+  background-color: #303f9f;
+  color: white
+}
+.logo{
+  margin: 0 15px 0 15px;
+  font-size: 3rem;
+  display: flex ;
+  align-content: center;
+  justify-content: center;
+  line-height: 200%;
+}
+.logo-text{
+  margin: 0 15px 0 15px;
+  font-size: 0.8rem;
+}

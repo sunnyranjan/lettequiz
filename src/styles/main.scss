@@ -1,10 +1,84 @@
-@import "~bootstrap/dist/scss/bootstrap.scss";
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './material2-app-theme';
 
+$mat-font-family: 'Bangers', cursive;
 /* You can add global styles to this file, and also import other style files */
 html, body, material-app, md-sidenav-container {
+  font-family: 'Bangers', cursive !important;
+  letter-spacing: 1.5px;
   margin: 0;
   width: 100%;
   height: 100%;
+  .mat-button-toggle,
+  %mat-button-base,
+  .mat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-icon-button,
+  .mat-mini-fab,
+  .mat-card,
+  .mat-checkbox,
+  .mat-input-container,
+  .mat-list,
+  .mat-menu-item,
+  .mat-radio-button,
+  .mat-select,
+  .mat-list .mat-list-item .mat-list-item-content,
+  .mat-nav-list .mat-list-item .mat-list-item-content,
+  .mat-simple-snackbar,
+  .mat-tab-label,
+  .mat-slide-toggle-content,
+  .mat-toolbar,
+  .mat-tooltip {
+    font-family: $mat-font-family;
+    letter-spacing: 1.5px;
+
+  }
 }
 
+.button-row {
+  display: flex;
+  background-color: #303f9f;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 15px;
+  align-content: space-between;
+  align-items: flex-end;
+}
+
+.quiz-question {
+  font-size: 2rem;
+  color: white;
+}
+
+.quiz-container {
+  border: 2px solid #303f9f;
+  min-height: 100%;
+  border-radius: 4px;
+  @extend .mat-elevation-z20;
+
+  &__header {
+    display: flex;
+    background-color: #303f9f;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  &__footer {
+    display: flex;
+    background-color: #303f9f;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+
+  }
+}
+
+.full-width{
+  width: 100%;
+}

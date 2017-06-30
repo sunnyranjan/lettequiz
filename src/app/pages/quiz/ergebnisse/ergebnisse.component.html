@@ -1,2 +1,16 @@
-{{interests}}
-{{targetGroup}}
+<div class="results-container">
+  <div class="container">
+
+    <app-result-banner [bannerText]="'glückWünsch du bist . . . .'"></app-result-banner>
+    <app-result-banner [bannerText]="' der ' + letteType"></app-result-banner>
+  </div>
+
+
+  <div class="container-fluid full-width">
+    <div *ngFor="let filterTable of allRecommendationsArray">
+      <app-result-panels [activityTable]="filterTable"></app-result-panels>
+    </div>
+
+
+  </div>
+</div>

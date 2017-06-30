@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.css']
+  styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent implements OnInit {
   stepNumber: number;
@@ -15,7 +15,7 @@ export class QuizComponent implements OnInit {
   }
   incrementStep() {
     this.stepNumber++;
-    console.log(this.stepNumber)
+
   }
   decrementStep() {
     this.stepNumber--;

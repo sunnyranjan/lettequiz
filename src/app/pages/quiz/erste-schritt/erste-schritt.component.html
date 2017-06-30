@@ -1,29 +1,38 @@
 <div class="erste-schritt-container">
-  <div class="container">
+  <div class="container quiz-container">
+    <div class="quiz-container__header text-center">
+      <span class="quiz-question"> Welcher Typ Bist du?
+      </span>
+    </div>
 
     <md-radio-group [(ngModel)]="personType">
 
-      <div class="row">
+      <div class="row no-gutters">
         <div *ngFor="let firstStep of firstStepOptions"
-             class="col-xs-12 col-sm-6 col-md-4">
-          <app-quiz-card [optionsObj]="firstStep"></app-quiz-card>
+             class="col-xs-6 col-sm-4 col-md-3">
+          <app-quiz-card [optionsObj]="firstStep" [optionChecked] = "optionChecked(firstStep)"></app-quiz-card>
         </div>
       </div>
 
     </md-radio-group>
 
-
-    <div class="button-row">
-      <button class="primary"
-              (click)="previousStep.emit(1)"
-              md-raised-button>Zurück
+    <div class="quiz-container__footer">
+      <button color="accent"
+              (click)="goPreviousStep(1)"
+              md-raised-button><md-icon>keyboard_arrow_left</md-icon>Zurück
       </button>
 
-      <button class="primary"
+      <button color="accent"
               [disabled]="!personType"
-              (click)="submitFirstStep(1)"
-              md-raised-button>Weiter
+              (click)="goNextStep(1)"
+              md-raised-button>Weiter<md-icon>keyboard_arrow_right</md-icon>
       </button>
+
+
     </div>
+    </div>
+
   </div>
-</div>
+
+
+

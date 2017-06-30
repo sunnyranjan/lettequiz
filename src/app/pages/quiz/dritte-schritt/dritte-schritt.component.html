@@ -1,29 +1,34 @@
-<div class="erste-schritt-container">
-  <div class="container">
+<div class="dritte-schritt-container">
+  <div class="container quiz-container">
+    <div class="quiz-container__header text-center">
+      <span class="quiz-question"> Was liegt dir?
+      </span>
+    </div>
 
     <md-radio-group [(ngModel)]="interests">
 
-      <div class="row">
+      <div class="row no-gutters">
         <div *ngFor="let thirdStep of thirdStepOptions"
-             class="col-xs-12 col-sm-6 col-md-4">
-          <app-quiz-card [optionsObj]="thirdStep"></app-quiz-card>
+             class="col-xs-6 col-sm-4 col-md-3">
+          <app-quiz-card [optionsObj]="thirdStep"
+                         [optionChecked]="optionChecked(thirdStep)"></app-quiz-card>
         </div>
       </div>
 
     </md-radio-group>
-
-
-    <div class="button-row">
-      <button class="primary"
-              (click)="previousStep.emit(1)"
-              md-raised-button>Zurück
+    <div class="quiz-container__footer">
+      <button color="accent"
+              (click)="goPreviousStep(1)"
+              md-raised-button><i class="material-icons">keyboard_arrow_left</i>Zurück
       </button>
 
-      <button class="primary"
+      <button color="accent"
               [disabled]="!interests"
-              (click)="submitThirdStep(1)"
+              (click)="goNextStep(1)"
               md-raised-button>Weiter
       </button>
     </div>
+
   </div>
+
 </div>

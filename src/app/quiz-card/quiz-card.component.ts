@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class QuizCardComponent implements OnInit {
   @Input() optionsObj: any;
+  @Input() optionChecked: boolean;
 
   constructor() {
     this.optionsObj = {

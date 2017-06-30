@@ -6,7 +6,7 @@ import {Subscription} from "rxjs/Subscription";
 @Component({
   selector: 'app-erste-schritt',
   templateUrl: './erste-schritt.component.html',
-  styleUrls: ['./erste-schritt.component.css']
+  styleUrls: ['./erste-schritt.component.scss']
 })
 export class ErsteSchrittComponent implements OnInit, OnDestroy {
 
@@ -21,16 +21,28 @@ export class ErsteSchrittComponent implements OnInit, OnDestroy {
     this.personTypeState = this.trackQuiz.trackFirstStep$.subscribe((state: any ) => {
       this.personType = state;
     });
+    this.personType = this.trackQuiz.getFirstStepChoice();
   }
 
   ngOnInit() {
     this.firstStepOptions = firstStepOptions.options;
 
   }
+  goPreviousStep(step: number) {
+    this.trackQuiz.setFirstStepChoice(this.personType);
+    this.previousStep.emit(step);
+  }
 
-  submitFirstStep(step: number) {
+  goNextStep(step: number) {
     this.trackQuiz.setFirstStepChoice(this.personType);
     this.nextStep.emit(step);
+  }
+  optionChecked(option: any) {
+    if (this.personType) {
+      return option.value === this.personType ? true : false;
+    } else {
+      return false;
+    }
   }
 
   ngOnDestroy(): void {
