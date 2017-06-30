@@ -16,15 +16,10 @@ export class ErgebnisseComponent implements OnInit {
   targetGroupString: string;
   targetGroup: string[];
   activities: any;
-  personTypeFilter: any;
-  targetGroupFilter: any;
-  interestsFilter: any;
-  allFitler: any;
+
   letteType: string;
-  fallbackTable: any;
   private personTypeOptions: Array<any>;
-  personTypeTargetGroupFilter: any ;
-  private allRecommendationsArray: Array <any>;
+  allRecommendationsArray: Array<any>;
 
 
   constructor(private trackQuiz: TrackQuizService) {
@@ -37,7 +32,6 @@ export class ErgebnisseComponent implements OnInit {
 
   ngOnInit() {
     this.modifyUserOptions();
-
 
 
   }
@@ -71,22 +65,22 @@ export class ErgebnisseComponent implements OnInit {
     const expandOtherTables = allActivity.length > 0 ? false : true;
     this.allRecommendationsArray = [
       {
-        keywords:  ` ${this.personType} ${this.targetGroupString} ${this.interests} `,
+        keywords: ` ${this.personType} ${this.targetGroupString} ${this.interests} `,
         expanded: true,
         activity: allActivity
       },
       {
-        keywords:  `${this.personType}`,
+        keywords: `${this.personType}`,
         expanded: expandOtherTables,
         activity: personTypeActivity
       },
       {
-        keywords:  `${this.targetGroupString}`,
+        keywords: `${this.targetGroupString}`,
         expanded: expandOtherTables,
         activity: targetGroupActivity
       },
       {
-        keywords:  `${this.interests}`,
+        keywords: `${this.interests}`,
         expanded: expandOtherTables,
         activity: interestsActivity
       },
