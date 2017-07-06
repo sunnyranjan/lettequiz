@@ -5,62 +5,62 @@ export const thirdStepOptions = {
     {
       name: 'Sprache',
       value: 'sprache',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/sprache.png',
     },
     {
       name: 'Lesen',
       value: 'lesen',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/lesen.png',
     },
     {
       name: 'Mathematik',
       value: 'mathematik',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/mathe.png',
     },
     {
       name: 'Musik',
       value: 'musik',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/musik.png',
     },
     {
       name: 'Spielen',
       value: 'spielen',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/spielen.png',
     },
     {
       name: 'Sport',
       value: 'sport',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/sport.png',
     },
     {
       name: 'Basteln',
       value: 'basteln',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/basteln.png',
     },
     {
       name: 'Nachbarschaft',
       value: 'nachbarschaft',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/nachbarschaft.png',
     },
     {
       name: 'Kunst',
       value: 'kunst',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/kunst.png',
     },
     {
       name: 'Gärtnern',
       value: 'garten',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/gaerten.png',
     },
     {
       name: 'Feste',
       value: 'feste',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/feste.png',
     },
     {
       name: 'Politik',
       value: 'politik',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-3/politik.png',
     }
   ]
 };

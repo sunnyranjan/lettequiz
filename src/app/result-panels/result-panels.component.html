@@ -1,0 +1,48 @@
+<md-expansion-panel
+  [class.noResults] = "activityTable.activity.length <= 0"
+  class="result-panel-container"
+  #myPanel
+  [expanded] = "activityTable.expanded">
+  <md-expansion-panel-header [class.noResults] = "activityTable.activity.length <= 0"
+    class="result-panel-container__header">
+    <h5 class="result-panel-container__text">
+      Unsere Empfehlung für
+    </h5>
+    <div class="result-panel-container__pills">
+      <span class="badge badge-pill badge-primary">{{activityTable.keywords}}</span>
+
+    </div>
+  </md-expansion-panel-header>
+
+
+  <div *ngIf="activityTable.activity.length <= 0">
+    <h3>leider gab es keine übereinstimmung</h3>
+  </div>
+  <div *ngIf="activityTable.activity.length > 0">
+
+    <md-list>
+
+      <div *ngFor="let recommendation of activityTable.activity">
+
+        <h4 md-line> <md-icon md-list-icon class="activity-icon">local_activity</md-icon>{{recommendation.name}}</h4>
+        <address class="activity-address" >
+          <div>
+            <strong>{{recommendation.address.contactPerson}}</strong>
+          </div>
+          <div>{{recommendation.address.address1}}</div>
+          <div>{{recommendation.address.address2}}</div>
+          <div>{{recommendation.address.postcode}}  {{recommendation.address.city}}</div>
+          <div>{{recommendation.address.email}}</div>
+          <div>{{recommendation.address.phone}}</div>
+          <a href="{{recommendation.address.link}}">{{recommendation.address.link}}</a>
+
+        </address>
+
+
+      </div>
+
+    </md-list>
+
+  </div>
+
+</md-expansion-panel>

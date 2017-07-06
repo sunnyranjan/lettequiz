@@ -5,49 +5,49 @@ export const secondStepOptions = {
       key: '1',
       name: 'Tiere',
       value: 'tiere',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/tiere.png',
     },
     {
       key: '2',
       name: 'Erwachsene',
       value: 'erwachsene',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc:  'assets/image/quiz-bilder/step-2/erwachsen.png',
     },
     {
-      key: '3',
+      key: '2',
       name: 'Kinder',
       value: 'kinder',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/kinder.png',
     },
     {
       key: '4',
       name: 'Jugendliche',
       value: 'jugendliche',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/jugendlich.png',
     },
     {
       key: '5',
       name: 'Senioren',
       value: 'senioren',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/senioren.png',
     },
     {
       key: '6',
       name: 'Schüler',
       value: 'schueler',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/schueler.png',
     },
     {
       key: '7',
       name: 'Familien',
       value: 'familie',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/familie.png',
     },
     {
       key: '8',
       name: 'Alle',
       value: 'tiere,jugendliche,erwachsene,senioren,kinder',
-      imageSrc: 'http://lorempixel.com/400/400/'
+      imageSrc: 'assets/image/quiz-bilder/step-2/alle.png',
     }
   ]
 };

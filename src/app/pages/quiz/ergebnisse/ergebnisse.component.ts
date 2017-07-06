@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, OnInit} from '@angular/core';
 import {TrackQuizService} from '../../../services/track-quiz.service';
 import {Activity} from '../../../models/activity';
 import {firstStepOptions} from '../../../models/first-step-options';
@@ -9,14 +9,13 @@ import {firstStepOptions} from '../../../models/first-step-options';
   templateUrl: './ergebnisse.component.html',
   styleUrls: ['./ergebnisse.component.scss']
 })
-export class ErgebnisseComponent implements OnInit {
+export class ErgebnisseComponent implements OnInit, AfterViewChecked {
 
   interests: string;
   personType: string;
   targetGroupString: string;
   targetGroup: string[];
   activities: any;
-
   letteType: string;
   private personTypeOptions: Array<any>;
   allRecommendationsArray: Array<any>;
@@ -32,8 +31,9 @@ export class ErgebnisseComponent implements OnInit {
 
   ngOnInit() {
     this.modifyUserOptions();
-
-
+  }
+  ngAfterViewChecked() {
+    window.scrollTo(0, 0);
   }
 
   modifyUserOptions(): void {

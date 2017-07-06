@@ -1,0 +1,63 @@
+:host{
+  margin: 5px 0;
+  display: block;
+}
+.result-panel-container {
+
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00AA8D;
+  &__text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+  &__pills {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: 5px;
+
+  }
+  &__header {
+    height: 68px !important;
+    background-color: #00BF9A;
+    &.noResults{
+      background-color: #EF5350;
+
+    }
+
+  }
+}
+:host /deep/ .mat-expansion-panel.noResults {
+  background-color: #EF5350;
+
+}
+
+:host /deep/ .mat-expansion-panel{
+  background-color: #00BF9A;
+
+}
+:host /deep/ .mat-expansion-panel-content{
+  background-color: wheat;
+}
+
+.noResults {
+  border-color: #FF4436
+}
+:host /deep/ .mat-expansion-indicator {
+  height: 68px !important;
+  line-height: 68px !important;
+}
+
+.activity-address{
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  margin-left: 35px;
+
+}
+.activity-icon{
+  margin-right: 10px;
+}

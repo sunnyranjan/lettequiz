@@ -1,14 +1,14 @@
-import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import {AfterViewChecked, Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {firstStepOptions} from '../../../models/first-step-options';
 import {TrackQuizService} from '../../../services/track-quiz.service';
-import {Subscription} from "rxjs/Subscription";
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-erste-schritt',
   templateUrl: './erste-schritt.component.html',
   styleUrls: ['./erste-schritt.component.scss']
 })
-export class ErsteSchrittComponent implements OnInit, OnDestroy {
+export class ErsteSchrittComponent implements OnInit, OnDestroy, AfterViewChecked {
 
 
   @Output() nextStep: EventEmitter<number> = new EventEmitter<number>();
@@ -28,14 +28,23 @@ export class ErsteSchrittComponent implements OnInit, OnDestroy {
     this.firstStepOptions = firstStepOptions.options;
 
   }
+
+  ngAfterViewChecked() {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+  }
+
   goPreviousStep(step: number) {
     this.trackQuiz.setFirstStepChoice(this.personType);
     this.previousStep.emit(step);
+
   }
 
   goNextStep(step: number) {
     this.trackQuiz.setFirstStepChoice(this.personType);
     this.nextStep.emit(step);
+
   }
   optionChecked(option: any) {
     if (this.personType) {

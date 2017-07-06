@@ -20,7 +20,7 @@ import {ROUTES} from './app.routes';
 import {RouterModule} from '@angular/router';
 import {MdButtonModule} from '@angular/material';
 import { QuizCardComponent } from './quiz-card/quiz-card.component';
-import {TrackQuizService} from "./services/track-quiz.service";
+import {TrackQuizService} from './services/track-quiz.service';
 import { ResultBannerComponent } from './result-banner/result-banner.component';
 import { ResultPanelsComponent } from './result-panels/result-panels.component';
 @NgModule({
@@ -38,7 +38,7 @@ import { ResultPanelsComponent } from './result-panels/result-panels.component';
     SideNavComponent,
     QuizCardComponent,
     ResultBannerComponent,
-    ResultPanelsComponent
+    ResultPanelsComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +50,7 @@ import { ResultPanelsComponent } from './result-panels/result-panels.component';
     MaterialModule,
     MdNativeDateModule,
     MdButtonModule,
-    MdSidenavModule
+    MdSidenavModule,
   ],
   providers: [TrackQuizService],
   bootstrap: [AppComponent]
